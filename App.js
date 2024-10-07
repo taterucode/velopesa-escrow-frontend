@@ -7,6 +7,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
+import mpesaIcon from '../assets/mpesa-icon.png';
+import airtelIcon from '../assets/airtel-icon.png';
+import equitelIcon from '../assets/equitel-icon.png';
+import tigoIcon from '../assets/tigo-icon.png';
+import mtnIcon from '../assets/mtn-icon.png';
 
 
 // Global State Context
@@ -107,28 +112,27 @@ const countryConfigs = {
   KE: {
     currency: 'KES',
     paymentOptions: [
-      { id: 'mpesa', name: 'M-PESA', icon: require('./assets/mpesa-icon.png') }, // No "images" folder
-      { id: 'airtel', name: 'Airtel Money', icon: require('./assets/airtel-icon.png') }, // No "images" folder
-      { id: 'equitel', name: 'Equitel', icon: require('./assets/equitel-icon.png') }, // No "images" folder
+      { id: 'mpesa', name: 'M-PESA', icon: mpesaIcon },
+      { id: 'airtel', name: 'Airtel Money', icon: airtelIcon },
+      { id: 'equitel', name: 'Equitel', icon: equitelIcon },
     ]
   },
   TZ: {
     currency: 'TZS',
     paymentOptions: [
-      { id: 'tigopesa', name: 'TigoPesa', icon: require('./assets/tigo-icon.png') }, // No "images" folder
-      { id: 'mpesa', name: 'M-PESA', icon: require('./assets/mpesa-icon.png') }, // No "images" folder
-      { id: 'airtel', name: 'Airtel Money', icon: require('./assets/airtel-icon.png') }, // No "images" folder
+      { id: 'tigopesa', name: 'TigoPesa', icon: tigoIcon },
+      { id: 'mpesa', name: 'M-PESA', icon: mpesaIcon },
+      { id: 'airtel', name: 'Airtel Money', icon: airtelIcon },
     ]
   },
   UG: {
     currency: 'UGX',
     paymentOptions: [
-      { id: 'mtn', name: 'MTN Mobile Money', icon: require('./assets/mtn-icon.png') }, // No "images" folder
-      { id: 'airtel', name: 'Airtel Money', icon: require('./assets/airtel-icon.png') }, // No "images" folder
+      { id: 'mtn', name: 'MTN Mobile Money', icon: mtnIcon },
+      { id: 'airtel', name: 'Airtel Money', icon: airtelIcon },
     ]
   },
 };
-
 
 // Styled components (existing + new ones)
 const Container = styled(SafeAreaView)`
